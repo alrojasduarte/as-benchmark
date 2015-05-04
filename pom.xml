@@ -37,8 +37,6 @@
 			<version>1.2.17</version>
 		</dependency>
 
-
-
 	</dependencies>
 
 	<profiles>
@@ -49,108 +47,109 @@
 				<as.name>jboss</as.name>
 				<as.war.path>C:/aplication-servers/jboss/webapps</as.war.path>
 			</properties>
-			 <activation>
+			<activation>
 				<property>
 					<name>environment</name>
 					<value>jboss</value>
 				</property>
-		   </activation>
+			</activation>
 		</profile>
-	
+
 		<profile>
 			<id>jetty</id>
 			<properties>
 				<as.name>jetty</as.name>
 				<as.war.path>C:/aplication-servers/jetty/webapps</as.war.path>
 			</properties>
-			 <activation>
+			<activation>
 				<property>
 					<name>environment</name>
 					<value>jetty</value>
 				</property>
-		   </activation>
+			</activation>
 		</profile>
-		
+
 		<profile>
 			<id>glassfish</id>
 			<properties>
 				<as.name>glassfish</as.name>
 				<as.war.path>C:/aplication-servers/glassfish/webapps</as.war.path>
 			</properties>
-			 <activation>
+			<activation>
 				<property>
 					<name>environment</name>
 					<value>glassfish</value>
 				</property>
-		   </activation>
+			</activation>
 		</profile>
-		
+
 		<profile>
 			<id>tomcat</id>
 			<properties>
 				<as.name>tomcat</as.name>
 				<as.war.path>C:/aplication-servers/tomcat/webapps</as.war.path>
 			</properties>
-			 <activation>
+			<activation>
 				<property>
 					<name>environment</name>
 					<value>tomcat</value>
 				</property>
-		   </activation>
+			</activation>
 		</profile>
-		
 
 	</profiles>
-	
+
 	<build>
 		<finalName>as-benchmark</finalName>
 		<resources>
-            <resource>
-                <filtering>true</filtering>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>jaxws-maven-plugin</artifactId>
-					<version>1.10</version>
-					<executions>
-						<execution>
-							<phase>process-classes</phase>
-							<goals>
-								<goal>wsgen</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<sei>co.edu.unal.ws.TestWSImpl</sei>
-						<genWsdl>true</genWsdl>
-						<keep>true</keep>
-						<resourceDestDir>${basedir}/src/main/webapp/WEB-INF/wsdl</resourceDestDir>
-						<sourceDestDir>${basedir}/src/main/java</sourceDestDir>
-					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>com.sun</groupId>
-							<artifactId>tools</artifactId>
-							<version>1.7</version>
-							<scope>system</scope>
-							<systemPath>C:/Java/jdk7/lib/tools.jar</systemPath>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-war-plugin</artifactId>
-						<version>2.0</version>
-						<configuration>
-							<outputDirectory>${as.war.path}</outputDirectory>
-						</configuration>
-						</plugin>				
-			</plugins>
-			
-	</build>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
 
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>wsgen</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sei>co.edu.unal.ws.TestWSImpl</sei>
+					<genWsdl>true</genWsdl>
+					<keep>true</keep>
+					<resourceDestDir>${basedir}/src/main/webapp/WEB-INF/wsdl</resourceDestDir>
+					<sourceDestDir>${basedir}/src/main/java</sourceDestDir>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.sun</groupId>
+						<artifactId>tools</artifactId>
+						<version>1.7</version>
+						<scope>system</scope>
+						<systemPath>C:/Java/jdk7/lib/tools.jar</systemPath>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<outputDirectory>${as.war.path}</outputDirectory>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
 
 </project>
