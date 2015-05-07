@@ -45,7 +45,7 @@
 			<id>jboss</id>
 			<properties>
 				<as.name>jboss</as.name>
-				<as.war.path>C:/aplication-servers/jboss/webapps</as.war.path>
+				<as.war.path>C:/application-servers/jboss/webapps</as.war.path>
 			</properties>
 			<activation>
 				<property>
@@ -59,7 +59,7 @@
 			<id>jetty</id>
 			<properties>
 				<as.name>jetty</as.name>
-				<as.war.path>C:/aplication-servers/jetty/webapps</as.war.path>
+				<as.war.path>C:/application-servers/jetty/webapps</as.war.path>
 			</properties>
 			<activation>
 				<property>
@@ -73,7 +73,7 @@
 			<id>glassfish</id>
 			<properties>
 				<as.name>glassfish</as.name>
-				<as.war.path>C:/aplication-servers/glassfish/webapps</as.war.path>
+				<as.war.path>C:/application-servers/glassfish/webapps</as.war.path>
 			</properties>
 			<activation>
 				<property>
@@ -87,7 +87,7 @@
 			<id>tomcat</id>
 			<properties>
 				<as.name>tomcat</as.name>
-				<as.war.path>C:/aplication-servers/tomcat/webapps</as.war.path>
+				<as.war.path>C:/application-servers/tomcat/webapps</as.war.path>
 			</properties>
 			<activation>
 				<property>

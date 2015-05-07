@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+	<New id="ds" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>jdbc/ds</Arg>
+		<Arg>
+			<New class="org.postgresql.ds.PGSimpleDataSource">
+				<Set name="User">as-benchmark</Set>
+				<Set name="Password">as-benchmark</Set>
+				<Set name="DatabaseName">as-benchmark</Set>
+				<Set name="ServerName">localhost</Set>
+				<Set name="PortNumber">5432</Set>
+			</New>
+		</Arg>
+	</New>
+</Configure>
