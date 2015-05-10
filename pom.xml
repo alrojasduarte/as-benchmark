@@ -58,7 +58,8 @@
 			<id>jboss</id>
 			<properties>
 				<as.name>jboss</as.name>
-				<as.war.path>C:/application-servers/jboss/webapps</as.war.path>
+				<as.war.path>C:/application-servers/jboss/standalone/deployments</as.war.path>
+				<ds.res.ref.name>java:/ds</ds.res.ref.name>
 			</properties>
 			<activation>
 				<property>
@@ -73,6 +74,7 @@
 			<properties>
 				<as.name>jetty</as.name>
 				<as.war.path>C:/application-servers/jetty/webapps</as.war.path>
+				<ds.res.ref.name>jdbc/ds</ds.res.ref.name>
 			</properties>
 			<activation>
 				<property>
@@ -101,6 +103,7 @@
 			<properties>
 				<as.name>tomcat</as.name>
 				<as.war.path>C:/application-servers/tomcat/webapps</as.war.path>
+				<ds.res.ref.name>jdbc/ds</ds.res.ref.name>
 			</properties>
 			<activation>
 				<property>
@@ -158,6 +161,15 @@
 				<version>2.0</version>
 				<configuration>
 					<outputDirectory>${as.war.path}</outputDirectory>
+					<webResources>
+						<resource>
+							<filtering>true</filtering>
+							<directory>src/main/webapp</directory>
+							<includes>
+								<include>**/web.xml</include>
+							</includes>
+						</resource>
+					</webResources>
 				</configuration>
 			</plugin>
 

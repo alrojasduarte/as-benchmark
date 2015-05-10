@@ -41,7 +41,10 @@ public class DBCommons {
 			if (AsServer.JETTY.equals(CurrentAsServer.getInstance()
 					.getAsServer())) {
 				JNDI = Constants.JNDI_LOOKUP_NAME_JDBC + "/" + Constants.DATASOURCE_NAME;
-			} else {
+			}else if (AsServer.JBOSS.equals(CurrentAsServer.getInstance()
+					.getAsServer())) {
+				JNDI = Constants.JNDI_LOOKUP_NAME_JAVA + "/" + Constants.DATASOURCE_NAME;
+			}else {
 				JNDI = Constants.JNDI_LOOKUP_NAME_COMP_ENV + "/" + Constants.JNDI_LOOKUP_NAME_JDBC + "/" + Constants.DATASOURCE_NAME;
 			}
 		}
