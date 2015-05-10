@@ -19,12 +19,16 @@ public class Properties {
 		if(INSTANCE==null){
 			INSTANCE = new Properties();
 			INSTANCE.properties = new java.util.Properties();
-			INSTANCE.properties.load(Properties.class.getClassLoader().getResourceAsStream(Constants.APPLICATION_ENVIRONMENT_PROPERTY_FILE_NAME));
+			INSTANCE.properties.load(Properties.class.getClassLoader().getResourceAsStream(Constants.APPLICATION_ENVIRONMENT_PROPERTIES_FILE_NAME));
 		}
 		return INSTANCE;
 	}
 	
 	public String getProperty(String key){
 		return properties.getProperty(key);
+	}
+	
+	public Integer getPropertyAsInteger(String key){
+		return Integer.valueOf(getProperty(key));
 	}
 }
