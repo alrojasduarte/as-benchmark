@@ -39,7 +39,8 @@ public class DBCommons {
 	private void setJndi() throws IOException {
 		if (JNDI == null) {
 			if (AsServer.JETTY.equals(CurrentAsServer.getInstance()
-					.getAsServer())) {
+					.getAsServer())||AsServer.GLASSFISH.equals(CurrentAsServer.getInstance()
+							.getAsServer())) {
 				JNDI = Constants.JNDI_LOOKUP_NAME_JDBC + "/" + Constants.DATASOURCE_NAME;
 			}else if (AsServer.JBOSS.equals(CurrentAsServer.getInstance()
 					.getAsServer())) {

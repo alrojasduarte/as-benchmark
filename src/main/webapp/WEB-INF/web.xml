@@ -5,13 +5,7 @@
 <web-app>
 	<display-name>as-benchmark</display-name>
 
-	<resource-ref>
-		<description>My DataSource Reference</description>
-		<res-ref-name>${ds.res.ref.name}</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-	</resource-ref>
-
+	
 	<listener>
 		<listener-class>
 			com.sun.xml.ws.transport.http.servlet.WSServletContextListener
@@ -54,6 +48,14 @@
 		<servlet-name>AdminServlet</servlet-name>
 		<url-pattern>/servlet/AdminServlet</url-pattern>
 	</servlet-mapping>
+
+
+	<resource-ref>
+		<description>My DataSource Reference</description>
+		<res-ref-name>${ds.res.ref.name}</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
 
 
 </web-app>

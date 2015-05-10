@@ -88,7 +88,8 @@
 			<id>glassfish</id>
 			<properties>
 				<as.name>glassfish</as.name>
-				<as.war.path>C:/application-servers/glassfish/webapps</as.war.path>
+				<as.war.path>C:/application-servers/glassfish/glassfish/domains/domain1/autodeploy</as.war.path>
+				<ds.res.ref.name>jdbc/ds</ds.res.ref.name>
 			</properties>
 			<activation>
 				<property>
