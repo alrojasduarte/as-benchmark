@@ -5,8 +5,10 @@ package co.edu.unal.db;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
@@ -52,6 +54,18 @@ public class DBCommons {
 		LOGGER.info("Constants.JNDI_DATABASE=" + JNDI);
 	}
 
+	
+	public void close(ResultSet resultSet) {
+		try {
+			if (resultSet != null) {
+				resultSet.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 	public void close(Connection connection) {
 		try {
 			if (connection != null) {
@@ -61,6 +75,27 @@ public class DBCommons {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public void close(PreparedStatement preparedStatement) {
+		try {
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int executeBatch(PreparedStatement preparedStatement) throws SQLException {
+		int totalRecords = 0;
+		int[] totalRecordsByInstructionArray = preparedStatement.executeBatch();
+		for(int totalRecordsByInstruction:totalRecordsByInstructionArray){
+			totalRecords+=totalRecordsByInstruction;
+		}
+		preparedStatement.clearParameters();
+		preparedStatement.clearBatch();
+		return totalRecords;
 	}
 
 }

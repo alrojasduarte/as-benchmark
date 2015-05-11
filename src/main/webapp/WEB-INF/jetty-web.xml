@@ -5,9 +5,9 @@
 		<Arg>jdbc/ds</Arg>
 		<Arg>
 			<New class="org.postgresql.ds.PGSimpleDataSource">
-				<Set name="User">as-benchmark</Set>
-				<Set name="Password">as-benchmark</Set>
-				<Set name="DatabaseName">as-benchmark</Set>
+				<Set name="User">as_benchmark</Set>
+				<Set name="Password">as_benchmark</Set>
+				<Set name="DatabaseName">as_benchmark</Set>
 				<Set name="ServerName">localhost</Set>
 				<Set name="PortNumber">5432</Set>
 			</New>

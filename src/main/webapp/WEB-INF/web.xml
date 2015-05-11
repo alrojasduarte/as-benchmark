@@ -12,7 +12,7 @@
 		</listener-class>
 	</listener>
 	<servlet>
-		<servlet-name>TestWS</servlet-name>
+		<servlet-name>PersistTestWS</servlet-name>
 		<servlet-class>
 			com.sun.xml.ws.transport.http.servlet.WSServlet
 		</servlet-class>
@@ -29,8 +29,8 @@
 		<load-on-startup>100</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>TestWS</servlet-name>
-		<url-pattern>/TestWS</url-pattern>
+		<servlet-name>PersistTestWS</servlet-name>
+		<url-pattern>/PersistTestWS</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>AxisServlet</servlet-name>

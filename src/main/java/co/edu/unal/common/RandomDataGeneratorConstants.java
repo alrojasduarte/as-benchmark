@@ -1,0 +1,21 @@
+package co.edu.unal.common;
+
+public interface RandomDataGeneratorConstants {
+
+	Integer PERSON_FIRST_NAME_MIN_LENGTH=10;
+	Integer PERSON_FIRST_NAME_MAX_LENGTH=50;
+	
+	Integer PERSON_SECOND_NAME_MIN_LENGTH=10;
+	Integer PERSON_SECOND_NAME_MAX_LENGTH=50;
+	
+	Integer PERSON_FIRST_LASTNAME_MIN_LENGTH=10;
+	Integer PERSON_FIRST_LASTNAME_MAX_LENGTH=50;
+	
+	Integer PERSON_SECOND_LASTNAME_MIN_LENGTH=10;
+	Integer PERSON_SECOND_LASTNAME_MAX_LENGTH=50;
+	
+	Integer PERSON_MIN_AGE = 1;
+	Integer PERSON_MAX_AGE = 94;
+	
+	char [] PERSON_GENDER = {'F','M'};
+}

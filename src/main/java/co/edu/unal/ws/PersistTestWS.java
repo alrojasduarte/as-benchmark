@@ -13,9 +13,10 @@ import javax.jws.soap.SOAPBinding.Use;
  * @author Andrés Leonardo Rojas Duarte - alrojasd@unal.edu.co
  *
  */
+@SuppressWarnings("restriction")
 @WebService 
 @SOAPBinding(style = Style.DOCUMENT, use=Use.LITERAL)
-public interface TestWS {
+public interface PersistTestWS {
 	@WebMethod
-	String hellowWolrd(String name);
+	void doTest();
 }

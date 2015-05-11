@@ -22,7 +22,7 @@ public class CurrentAsServer {
 	public static CurrentAsServer getInstance() throws IOException{
 		if(INSTANCE==null){
 			INSTANCE = new CurrentAsServer();
-			String currentServer = Properties.getInstance().getProperty(Constants.PROPERTY_NAME_APPLICATION_SERVER);
+			String currentServer = Properties.getInstance().getProperty(PropertiesKeys.APPLICATION_SERVER);
 			INSTANCE.asServer = AsServer.valueOf(currentServer.toUpperCase());
 		}
 		return INSTANCE;

@@ -31,4 +31,8 @@ public class Properties {
 	public Integer getPropertyAsInteger(String key){
 		return Integer.valueOf(getProperty(key));
 	}
+	
+	public Boolean getPropertyAsBoolean(String key){
+		return Boolean.valueOf(getProperty(key));
+	}
 }

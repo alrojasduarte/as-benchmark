@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.unal.edu.co/" xmlns:tns="http://ws.unal.edu.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="doTest" type="tns:doTest"/>
+
+  <xs:element name="doTestResponse" type="tns:doTestResponse"/>
+
+  <xs:complexType name="doTest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="doTestResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+
