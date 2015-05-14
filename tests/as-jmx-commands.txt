@@ -1,0 +1,8 @@
+#jetty
+
+java -Dcom.sun.management.jmxremote -jar start.jar  etc/jetty-jmx.xml
+
+
+#tomcat: create /bin/setenv.bat
+
+set CATALINA_OPTS="-Dcom.sun.management.jmxremote"
