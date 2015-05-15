@@ -48,11 +48,10 @@ public class PersistTestWSImpl implements PersistTestWS {
 			persistBenchMarkResult(startDate,endDate,elapsedTime,rowsCount,connection,dbCommons);
 		} catch (Exception e) {
 			e.printStackTrace();
-			((SQLException)e).getNextException().printStackTrace();
+//			((SQLException)e).getNextException().printStackTrace();
 		}finally{
 			dbCommons.close(connection);
 			dbCommons.close(preparedStatement);
-			dbCommons.close(connection);
 		}
 		LOGGER.info("PersistTestWS finished");
 	}
