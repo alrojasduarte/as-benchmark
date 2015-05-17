@@ -8,7 +8,7 @@
 				<Set name="User">as_benchmark</Set>
 				<Set name="Password">as_benchmark</Set>
 				<Set name="DatabaseName">as_benchmark</Set>
-				<Set name="ServerName">jetty-db.crxmaepzz7gi.us-west-2.rds.amazonaws.com</Set>
+				<Set name="ServerName">jetty-db-15000.crxmaepzz7gi.us-west-2.rds.amazonaws.com</Set>
 				<Set name="PortNumber">5432</Set>				
 			</New>
 		</Arg>
