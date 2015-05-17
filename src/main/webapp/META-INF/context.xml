@@ -1,6 +1,6 @@
 <Context>
 	<Resource name="jdbc/ds" auth="Container" type="javax.sql.DataSource"
-		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://tomcat-db.crxmaepzz7gi.us-west-2.rds.amazonaws.com:5432/as_benchmark"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://tomcat-db-15000.crxmaepzz7gi.us-west-2.rds.amazonaws.com:5432/as_benchmark"
 		username="as_benchmark" password="as_benchmark" maxActive="20" maxIdle="10"
 		maxWait="-1" />
 </Context>
